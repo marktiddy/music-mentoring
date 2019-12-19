@@ -3,6 +3,9 @@ body {
   overflow-x: hidden;
   position: relative;
 }
+html {
+  overflow-x: hidden;
+}
 
 .container-fluid,
 .card,
