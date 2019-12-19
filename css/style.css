@@ -13,6 +13,7 @@ body {
 .top-video {
   margin-top: 0px;
   margin-left: -10px;
+  width: 110%;
   object-fit: cover;
   height: 550px;
 }
@@ -25,6 +26,12 @@ body {
 
 .mm-logo {
   width: 500px;
+}
+
+.inline-images {
+  width: 110%;
+  margin-left: -30px;
+  object-fit: cover;
 }
 
 .remove-margin {
@@ -44,4 +51,70 @@ body {
 #quoteCarousel .carousel-caption {
   color: #fff;
   top: 70%;
+}
+.footer-logo {
+  width: 30%;
+}
+.embedded-yt {
+  width: 560px;
+  height: 315px;
+}
+
+#testimonals {
+  padding-top: 10px;
+}
+
+@media only screen and (max-width: 500px) {
+  .top-video {
+    margin-top: 0px;
+    margin-left: 0px;
+    object-fit: cover;
+    height: 250px;
+  }
+
+  .card {
+    border-radius: 1;
+    border: 0px;
+    margin-top: 0px;
+  }
+
+  .mm-logo {
+    width: 250px;
+  }
+
+  #quoteCarousel .carousel {
+    margin-top: 60px;
+  }
+  #quoteCarousel .carousel-inner {
+    height: 500px;
+  }
+  #quoteCarousel .carousel-caption {
+    color: #fff;
+    top: 70%;
+  }
+
+  #quoteCarousel .carousel-indicators {
+    display: none;
+  }
+
+  .lesson-carousel {
+    width: 100%;
+  }
+  .inline-images {
+    width: 100%;
+    margin-left: 0px;
+    object-fit: cover;
+  }
+
+  .footer-logo {
+    width: 100%;
+  }
+
+  .mobile-padding {
+    padding: 20px;
+  }
+  .embedded-yt {
+    width: 231px;
+    height: 130px;
+  }
 }
