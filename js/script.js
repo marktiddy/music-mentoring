@@ -26,3 +26,36 @@ $(document).ready(function() {
     } // End if
   });
 });
+
+$(document).ready(function(event) {
+  $(".navbar-brand").hide();
+});
+
+//Let's try and capture the data spy
+$(window).scroll(function(event) {
+  var scrolled_val = $(document)
+    .scrollTop()
+    .valueOf();
+
+  if (
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    )
+  ) {
+    logoDisplay(scrolled_val, 200);
+  } else {
+    logoDisplay(scrolled_val, 500);
+  }
+});
+
+function logoDisplay(val, param) {
+  if (val > param) {
+    $(".navbar-brand").show({
+      duration: 200
+    });
+  } else {
+    $(".navbar-brand").hide({
+      duration: 200
+    });
+  }
+}
