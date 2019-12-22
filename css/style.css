@@ -42,6 +42,18 @@ html {
   padding: 15px;
 }
 
+.remove-margin-left {
+  margin-left: -14px;
+  width: 104%;
+  padding: 0px 10px 0px 10px;
+}
+
+#lesson-carousel {
+  width: 110%;
+  object-fit: cover;
+  margin-left: -30px;
+}
+
 .add-padding {
   padding: 20px;
 }
@@ -119,5 +131,20 @@ html {
   .embedded-yt {
     width: 231px;
     height: 130px;
+  }
+
+  .remove-margin-left {
+    margin-left: -15px;
+    width: 115%;
+    padding: 0px 20px 0px 10px;
+  }
+
+  #lesson-carousel {
+    width: 115%;
+    object-fit: cover;
+  }
+
+  .intro-quote {
+    font-size: 18px;
   }
 }
