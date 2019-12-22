@@ -144,7 +144,7 @@ html {
     object-fit: cover;
   }
 
-  .intro-quote {
-    font-size: 18px;
+  .training-section {
+    padding-right: 20px;
   }
 }
