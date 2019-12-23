@@ -137,7 +137,6 @@ html {
     margin-left: -15px;
     width: 120%;
     padding: 0px 30px 0px 10px;
-
   }
 
   #lesson-carousel {
@@ -146,6 +145,11 @@ html {
   }
 
   .training-section {
+    padding-left: 5px;
     padding-right: 25px;
+    text-align: left;
+  }
+  .training-cards {
+    margin-left: -15px;
   }
 }
