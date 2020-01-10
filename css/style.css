@@ -79,6 +79,11 @@ html {
   padding-top: 10px;
 }
 
+#contact-us {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
 @media only screen and (max-width: 500px) {
   .top-video {
     margin-top: 0px;
@@ -152,5 +157,9 @@ html {
   }
   .training-cards {
     margin-left: -15px;
+  }
+  #overview-section {
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
