@@ -81,7 +81,11 @@ html {
 
 #contact-us {
   margin-top: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
+  margin-left: -15px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  width: 115%;
 }
 
 @media only screen and (max-width: 500px) {
@@ -117,9 +121,6 @@ html {
     display: none;
   }
 
-  .lesson-carousel {
-    width: 100%;
-  }
   .inline-images {
     width: 100%;
     margin-left: 0px;
@@ -145,21 +146,31 @@ html {
   }
 
   #lesson-carousel {
-    width: 115%;
+    width: 120%;
     object-fit: cover;
+    padding-bottom: -15px;
+    margin-bottom: -10px;
   }
 
-  .training-section {
-    padding-left: 5px;
-    padding-right: 40px;
-    margin-right: 5px;
-    text-align: left;
-  }
   .training-cards {
-    margin-left: -15px;
+    margin-left: -5px;
   }
   #overview-section {
+    padding-top: 15px;
+    margin-top: 5px;
+    padding-bottom: 10px;
+  }
+  #overview-video {
     padding-top: 10px;
     padding-bottom: 10px;
+  }
+  #testimonals {
+    padding-top: 15px;
+  }
+  #contact-us {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 115%;
+    margin-left: -15px;
   }
 }
