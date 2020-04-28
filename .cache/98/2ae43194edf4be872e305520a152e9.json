@@ -1,1 +1,1203 @@
-{"id":"index.js","dependencies":[{"name":"/Users/marktiddy/Sites/Music Mentoring/music-mentoring/package.json","includedInParent":true,"mtime":1588099666040}],"generated":{"js":"//Some script to implement smooth scrolling on all browsers\n$(document).ready(function () {\n  // Add smooth scrolling to all links\n  $(\"a\").on(\"click\", function (event) {\n    // Make sure this.hash has a value before overriding default behavior\n    if (this.hash !== \"\") {\n      // Prevent default anchor click behavior\n      event.preventDefault(); // Store hash\n\n      var hash = this.hash; // Using jQuery's animate() method to add smooth page scroll\n      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area\n\n      $(\"html, body\").animate({\n        scrollTop: $(hash).offset().top\n      }, 800, function () {\n        // Add hash (#) to URL when done scrolling (default click behavior)\n        window.location.hash = hash;\n      });\n    } // End if\n\n  });\n});\n$(document).ready(function (event) {\n  $(\".navbar-brand\").hide();\n}); //Let's try and capture the data spy\n\n$(window).scroll(function (event) {\n  var scrolled_val = $(document).scrollTop().valueOf();\n\n  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {\n    logoDisplay(scrolled_val, 200);\n  } else {\n    logoDisplay(scrolled_val, 500);\n  }\n});\n\nfunction logoDisplay(val, param) {\n  if (val > param) {\n    $(\".navbar-brand\").show({\n      duration: 200\n    });\n  } else {\n    $(\".navbar-brand\").hide({\n      duration: 200\n    });\n  }\n}"},"sourceMaps":{"js":{"mappings":[{"generated":{"line":1,"column":0},"source":"index.js","original":{"line":1,"column":0}},{"name":"$","generated":{"line":2,"column":0},"source":"index.js","original":{"line":3,"column":0}},{"generated":{"line":2,"column":1},"source":"index.js","original":{"line":3,"column":1}},{"name":"document","generated":{"line":2,"column":2},"source":"index.js","original":{"line":3,"column":2}},{"generated":{"line":2,"column":10},"source":"index.js","original":{"line":3,"column":1}},{"generated":{"line":2,"column":11},"source":"index.js","original":{"line":3,"column":0}},{"name":"ready","generated":{"line":2,"column":12},"source":"index.js","original":{"line":3,"column":12}},{"generated":{"line":2,"column":17},"source":"index.js","original":{"line":3,"column":0}},{"generated":{"line":2,"column":18},"source":"index.js","original":{"line":3,"column":18}},{"generated":{"line":2,"column":30},"source":"index.js","original":{"line":3,"column":29}},{"generated":{"line":3,"column":0},"source":"index.js","original":{"line":4,"column":2}},{"name":"$","generated":{"line":4,"column":0},"source":"index.js","original":{"line":5,"column":2}},{"name":"$","generated":{"line":4,"column":2},"source":"index.js","original":{"line":5,"column":2}},{"generated":{"line":4,"column":3},"source":"index.js","original":{"line":5,"column":3}},{"generated":{"line":4,"column":4},"source":"index.js","original":{"line":5,"column":4}},{"generated":{"line":4,"column":7},"source":"index.js","original":{"line":5,"column":3}},{"generated":{"line":4,"column":8},"source":"index.js","original":{"line":5,"column":2}},{"name":"on","generated":{"line":4,"column":9},"source":"index.js","original":{"line":5,"column":9}},{"generated":{"line":4,"column":11},"source":"index.js","original":{"line":5,"column":2}},{"generated":{"line":4,"column":12},"source":"index.js","original":{"line":5,"column":12}},{"generated":{"line":4,"column":19},"source":"index.js","original":{"line":5,"column":2}},{"generated":{"line":4,"column":21},"source":"index.js","original":{"line":5,"column":21}},{"name":"event","generated":{"line":4,"column":31},"source":"index.js","original":{"line":5,"column":30}},{"generated":{"line":4,"column":36},"source":"index.js","original":{"line":5,"column":21}},{"generated":{"line":4,"column":38},"source":"index.js","original":{"line":5,"column":37}},{"generated":{"line":5,"column":0},"source":"index.js","original":{"line":6,"column":4}},{"generated":{"line":6,"column":0},"source":"index.js","original":{"line":7,"column":4}},{"generated":{"line":6,"column":8},"source":"index.js","original":{"line":7,"column":8}},{"name":"hash","generated":{"line":6,"column":13},"source":"index.js","original":{"line":7,"column":13}},{"generated":{"line":6,"column":17},"source":"index.js","original":{"line":7,"column":8}},{"generated":{"line":6,"column":22},"source":"index.js","original":{"line":7,"column":22}},{"generated":{"line":6,"column":24},"source":"index.js","original":{"line":7,"column":4}},{"generated":{"line":6,"column":26},"source":"index.js","original":{"line":7,"column":26}},{"generated":{"line":7,"column":0},"source":"index.js","original":{"line":8,"column":6}},{"name":"event","generated":{"line":8,"column":0},"source":"index.js","original":{"line":9,"column":6}},{"name":"event","generated":{"line":8,"column":6},"source":"index.js","original":{"line":9,"column":6}},{"generated":{"line":8,"column":11},"source":"index.js","original":{"line":9,"column":11}},{"name":"preventDefault","generated":{"line":8,"column":12},"source":"index.js","original":{"line":9,"column":12}},{"generated":{"line":8,"column":26},"source":"index.js","original":{"line":9,"column":6}},{"generated":{"line":8,"column":29},"source":"index.js","original":{"line":7,"column":26}},{"generated":{"line":8,"column":30},"source":"index.js","original":{"line":11,"column":6}},{"generated":{"line":10,"column":0},"source":"index.js","original":{"line":12,"column":6}},{"name":"hash","generated":{"line":10,"column":10},"source":"index.js","original":{"line":12,"column":10}},{"generated":{"line":10,"column":14},"source":"index.js","original":{"line":12,"column":14}},{"generated":{"line":10,"column":17},"source":"index.js","original":{"line":12,"column":17}},{"name":"hash","generated":{"line":10,"column":22},"source":"index.js","original":{"line":12,"column":22}},{"generated":{"line":10,"column":26},"source":"index.js","original":{"line":12,"column":6}},{"generated":{"line":10,"column":27},"source":"index.js","original":{"line":7,"column":26}},{"generated":{"line":10,"column":28},"source":"index.js","original":{"line":14,"column":6}},{"generated":{"line":11,"column":0},"source":"index.js","original":{"line":15,"column":6}},{"name":"$","generated":{"line":13,"column":0},"source":"index.js","original":{"line":16,"column":6}},{"name":"$","generated":{"line":13,"column":6},"source":"index.js","original":{"line":16,"column":6}},{"generated":{"line":13,"column":7},"source":"index.js","original":{"line":16,"column":7}},{"generated":{"line":13,"column":8},"source":"index.js","original":{"line":16,"column":8}},{"generated":{"line":13,"column":20},"source":"index.js","original":{"line":16,"column":7}},{"generated":{"line":13,"column":21},"source":"index.js","original":{"line":16,"column":6}},{"name":"animate","generated":{"line":13,"column":22},"source":"index.js","original":{"line":16,"column":22}},{"generated":{"line":13,"column":29},"source":"index.js","original":{"line":16,"column":6}},{"generated":{"line":13,"column":30},"source":"index.js","original":{"line":17,"column":8}},{"name":"scrollTop","generated":{"line":14,"column":0},"source":"index.js","original":{"line":18,"column":10}},{"name":"scrollTop","generated":{"line":14,"column":8},"source":"index.js","original":{"line":18,"column":10}},{"generated":{"line":14,"column":17},"source":"index.js","original":{"line":18,"column":19}},{"name":"$","generated":{"line":14,"column":19},"source":"index.js","original":{"line":18,"column":21}},{"generated":{"line":14,"column":20},"source":"index.js","original":{"line":18,"column":22}},{"name":"hash","generated":{"line":14,"column":21},"source":"index.js","original":{"line":18,"column":23}},{"generated":{"line":14,"column":25},"source":"index.js","original":{"line":18,"column":22}},{"generated":{"line":14,"column":26},"source":"index.js","original":{"line":18,"column":21}},{"name":"offset","generated":{"line":14,"column":27},"source":"index.js","original":{"line":18,"column":29}},{"generated":{"line":14,"column":33},"source":"index.js","original":{"line":18,"column":21}},{"name":"top","generated":{"line":14,"column":36},"source":"index.js","original":{"line":18,"column":38}},{"generated":{"line":15,"column":0},"source":"index.js","original":{"line":17,"column":8}},{"generated":{"line":15,"column":7},"source":"index.js","original":{"line":16,"column":6}},{"generated":{"line":15,"column":9},"source":"index.js","original":{"line":20,"column":8}},{"generated":{"line":15,"column":12},"source":"index.js","original":{"line":16,"column":6}},{"generated":{"line":15,"column":14},"source":"index.js","original":{"line":21,"column":8}},{"generated":{"line":15,"column":26},"source":"index.js","original":{"line":21,"column":19}},{"generated":{"line":16,"column":0},"source":"index.js","original":{"line":22,"column":10}},{"name":"window","generated":{"line":17,"column":0},"source":"index.js","original":{"line":23,"column":10}},{"name":"window","generated":{"line":17,"column":8},"source":"index.js","original":{"line":23,"column":10}},{"generated":{"line":17,"column":14},"source":"index.js","original":{"line":23,"column":16}},{"name":"location","generated":{"line":17,"column":15},"source":"index.js","original":{"line":23,"column":17}},{"generated":{"line":17,"column":23},"source":"index.js","original":{"line":23,"column":10}},{"name":"hash","generated":{"line":17,"column":24},"source":"index.js","original":{"line":23,"column":26}},{"generated":{"line":17,"column":28},"source":"index.js","original":{"line":23,"column":10}},{"name":"hash","generated":{"line":17,"column":31},"source":"index.js","original":{"line":23,"column":33}},{"generated":{"line":17,"column":35},"source":"index.js","original":{"line":23,"column":10}},{"generated":{"line":18,"column":0},"source":"index.js","original":{"line":24,"column":9}},{"generated":{"line":18,"column":7},"source":"index.js","original":{"line":16,"column":6}},{"generated":{"line":19,"column":0},"source":"index.js","original":{"line":26,"column":5}},{"generated":{"line":19,"column":5},"source":"index.js","original":{"line":5,"column":37}},{"generated":{"line":19,"column":6},"source":"index.js","original":{"line":26,"column":6}},{"generated":{"line":21,"column":0},"source":"index.js","original":{"line":27,"column":3}},{"generated":{"line":21,"column":3},"source":"index.js","original":{"line":5,"column":2}},{"generated":{"line":22,"column":0},"source":"index.js","original":{"line":28,"column":1}},{"generated":{"line":22,"column":1},"source":"index.js","original":{"line":3,"column":0}},{"name":"$","generated":{"line":23,"column":0},"source":"index.js","original":{"line":30,"column":0}},{"generated":{"line":23,"column":1},"source":"index.js","original":{"line":30,"column":1}},{"name":"document","generated":{"line":23,"column":2},"source":"index.js","original":{"line":30,"column":2}},{"generated":{"line":23,"column":10},"source":"index.js","original":{"line":30,"column":1}},{"generated":{"line":23,"column":11},"source":"index.js","original":{"line":30,"column":0}},{"name":"ready","generated":{"line":23,"column":12},"source":"index.js","original":{"line":30,"column":12}},{"generated":{"line":23,"column":17},"source":"index.js","original":{"line":30,"column":0}},{"generated":{"line":23,"column":18},"source":"index.js","original":{"line":30,"column":18}},{"name":"event","generated":{"line":23,"column":28},"source":"index.js","original":{"line":30,"column":27}},{"generated":{"line":23,"column":33},"source":"index.js","original":{"line":30,"column":18}},{"generated":{"line":23,"column":35},"source":"index.js","original":{"line":30,"column":34}},{"name":"$","generated":{"line":24,"column":0},"source":"index.js","original":{"line":31,"column":2}},{"name":"$","generated":{"line":24,"column":2},"source":"index.js","original":{"line":31,"column":2}},{"generated":{"line":24,"column":3},"source":"index.js","original":{"line":31,"column":3}},{"generated":{"line":24,"column":4},"source":"index.js","original":{"line":31,"column":4}},{"generated":{"line":24,"column":19},"source":"index.js","original":{"line":31,"column":3}},{"generated":{"line":24,"column":20},"source":"index.js","original":{"line":31,"column":2}},{"name":"hide","generated":{"line":24,"column":21},"source":"index.js","original":{"line":31,"column":21}},{"generated":{"line":24,"column":25},"source":"index.js","original":{"line":31,"column":2}},{"generated":{"line":25,"column":0},"source":"index.js","original":{"line":32,"column":1}},{"generated":{"line":25,"column":1},"source":"index.js","original":{"line":30,"column":0}},{"generated":{"line":25,"column":4},"source":"index.js","original":{"line":34,"column":0}},{"name":"$","generated":{"line":27,"column":0},"source":"index.js","original":{"line":35,"column":0}},{"generated":{"line":27,"column":1},"source":"index.js","original":{"line":35,"column":1}},{"name":"window","generated":{"line":27,"column":2},"source":"index.js","original":{"line":35,"column":2}},{"generated":{"line":27,"column":8},"source":"index.js","original":{"line":35,"column":1}},{"generated":{"line":27,"column":9},"source":"index.js","original":{"line":35,"column":0}},{"name":"scroll","generated":{"line":27,"column":10},"source":"index.js","original":{"line":35,"column":10}},{"generated":{"line":27,"column":16},"source":"index.js","original":{"line":35,"column":0}},{"generated":{"line":27,"column":17},"source":"index.js","original":{"line":35,"column":17}},{"name":"event","generated":{"line":27,"column":27},"source":"index.js","original":{"line":35,"column":26}},{"generated":{"line":27,"column":32},"source":"index.js","original":{"line":35,"column":17}},{"generated":{"line":27,"column":34},"source":"index.js","original":{"line":35,"column":33}},{"generated":{"line":28,"column":0},"source":"index.js","original":{"line":36,"column":2}},{"name":"scrolled_val","generated":{"line":28,"column":6},"source":"index.js","original":{"line":36,"column":6}},{"generated":{"line":28,"column":18},"source":"index.js","original":{"line":36,"column":18}},{"name":"$","generated":{"line":28,"column":21},"source":"index.js","original":{"line":36,"column":21}},{"generated":{"line":28,"column":22},"source":"index.js","original":{"line":36,"column":22}},{"name":"document","generated":{"line":28,"column":23},"source":"index.js","original":{"line":36,"column":23}},{"generated":{"line":28,"column":31},"source":"index.js","original":{"line":36,"column":22}},{"generated":{"line":28,"column":32},"source":"index.js","original":{"line":36,"column":21}},{"name":"scrollTop","generated":{"line":28,"column":33},"source":"index.js","original":{"line":37,"column":5}},{"generated":{"line":28,"column":42},"source":"index.js","original":{"line":36,"column":21}},{"name":"valueOf","generated":{"line":28,"column":45},"source":"index.js","original":{"line":38,"column":5}},{"generated":{"line":28,"column":52},"source":"index.js","original":{"line":36,"column":21}},{"generated":{"line":28,"column":54},"source":"index.js","original":{"line":36,"column":2}},{"generated":{"line":30,"column":0},"source":"index.js","original":{"line":40,"column":2}},{"generated":{"line":30,"column":6},"source":"index.js","original":{"line":41,"column":4}},{"name":"test","generated":{"line":30,"column":71},"source":"index.js","original":{"line":41,"column":69}},{"generated":{"line":30,"column":75},"source":"index.js","original":{"line":41,"column":4}},{"name":"navigator","generated":{"line":30,"column":76},"source":"index.js","original":{"line":42,"column":6}},{"generated":{"line":30,"column":85},"source":"index.js","original":{"line":42,"column":15}},{"name":"userAgent","generated":{"line":30,"column":86},"source":"index.js","original":{"line":42,"column":16}},{"generated":{"line":30,"column":95},"source":"index.js","original":{"line":41,"column":4}},{"generated":{"line":30,"column":96},"source":"index.js","original":{"line":40,"column":2}},{"generated":{"line":30,"column":98},"source":"index.js","original":{"line":44,"column":4}},{"name":"logoDisplay","generated":{"line":31,"column":0},"source":"index.js","original":{"line":45,"column":4}},{"name":"logoDisplay","generated":{"line":31,"column":4},"source":"index.js","original":{"line":45,"column":4}},{"generated":{"line":31,"column":15},"source":"index.js","original":{"line":45,"column":15}},{"name":"scrolled_val","generated":{"line":31,"column":16},"source":"index.js","original":{"line":45,"column":16}},{"generated":{"line":31,"column":28},"source":"index.js","original":{"line":45,"column":15}},{"generated":{"line":31,"column":30},"source":"index.js","original":{"line":45,"column":30}},{"generated":{"line":31,"column":33},"source":"index.js","original":{"line":45,"column":15}},{"generated":{"line":31,"column":34},"source":"index.js","original":{"line":45,"column":4}},{"generated":{"line":32,"column":0},"source":"index.js","original":{"line":46,"column":3}},{"generated":{"line":32,"column":3},"source":"index.js","original":{"line":40,"column":2}},{"generated":{"line":32,"column":9},"source":"index.js","original":{"line":46,"column":9}},{"name":"logoDisplay","generated":{"line":33,"column":0},"source":"index.js","original":{"line":47,"column":4}},{"name":"logoDisplay","generated":{"line":33,"column":4},"source":"index.js","original":{"line":47,"column":4}},{"generated":{"line":33,"column":15},"source":"index.js","original":{"line":47,"column":15}},{"name":"scrolled_val","generated":{"line":33,"column":16},"source":"index.js","original":{"line":47,"column":16}},{"generated":{"line":33,"column":28},"source":"index.js","original":{"line":47,"column":15}},{"generated":{"line":33,"column":30},"source":"index.js","original":{"line":47,"column":30}},{"generated":{"line":33,"column":33},"source":"index.js","original":{"line":47,"column":15}},{"generated":{"line":33,"column":34},"source":"index.js","original":{"line":47,"column":4}},{"generated":{"line":34,"column":0},"source":"index.js","original":{"line":48,"column":3}},{"generated":{"line":35,"column":0},"source":"index.js","original":{"line":49,"column":1}},{"generated":{"line":35,"column":1},"source":"index.js","original":{"line":35,"column":0}},{"generated":{"line":37,"column":0},"source":"index.js","original":{"line":51,"column":0}},{"name":"logoDisplay","generated":{"line":37,"column":9},"source":"index.js","original":{"line":51,"column":9}},{"generated":{"line":37,"column":20},"source":"index.js","original":{"line":51,"column":0}},{"name":"val","generated":{"line":37,"column":21},"source":"index.js","original":{"line":51,"column":21}},{"generated":{"line":37,"column":24},"source":"index.js","original":{"line":51,"column":0}},{"name":"param","generated":{"line":37,"column":26},"source":"index.js","original":{"line":51,"column":26}},{"generated":{"line":37,"column":31},"source":"index.js","original":{"line":51,"column":0}},{"generated":{"line":37,"column":33},"source":"index.js","original":{"line":51,"column":33}},{"generated":{"line":38,"column":0},"source":"index.js","original":{"line":52,"column":2}},{"name":"val","generated":{"line":38,"column":6},"source":"index.js","original":{"line":52,"column":6}},{"generated":{"line":38,"column":9},"source":"index.js","original":{"line":52,"column":9}},{"name":"param","generated":{"line":38,"column":12},"source":"index.js","original":{"line":52,"column":12}},{"generated":{"line":38,"column":17},"source":"index.js","original":{"line":52,"column":2}},{"generated":{"line":38,"column":19},"source":"index.js","original":{"line":52,"column":19}},{"name":"$","generated":{"line":39,"column":0},"source":"index.js","original":{"line":53,"column":4}},{"name":"$","generated":{"line":39,"column":4},"source":"index.js","original":{"line":53,"column":4}},{"generated":{"line":39,"column":5},"source":"index.js","original":{"line":53,"column":5}},{"generated":{"line":39,"column":6},"source":"index.js","original":{"line":53,"column":6}},{"generated":{"line":39,"column":21},"source":"index.js","original":{"line":53,"column":5}},{"generated":{"line":39,"column":22},"source":"index.js","original":{"line":53,"column":4}},{"name":"show","generated":{"line":39,"column":23},"source":"index.js","original":{"line":53,"column":23}},{"generated":{"line":39,"column":27},"source":"index.js","original":{"line":53,"column":4}},{"generated":{"line":39,"column":28},"source":"index.js","original":{"line":53,"column":28}},{"name":"duration","generated":{"line":40,"column":0},"source":"index.js","original":{"line":54,"column":6}},{"name":"duration","generated":{"line":40,"column":6},"source":"index.js","original":{"line":54,"column":6}},{"generated":{"line":40,"column":14},"source":"index.js","original":{"line":54,"column":14}},{"generated":{"line":40,"column":16},"source":"index.js","original":{"line":54,"column":16}},{"generated":{"line":41,"column":0},"source":"index.js","original":{"line":53,"column":28}},{"generated":{"line":41,"column":5},"source":"index.js","original":{"line":53,"column":4}},{"generated":{"line":42,"column":0},"source":"index.js","original":{"line":56,"column":3}},{"generated":{"line":42,"column":3},"source":"index.js","original":{"line":52,"column":2}},{"generated":{"line":42,"column":9},"source":"index.js","original":{"line":56,"column":9}},{"name":"$","generated":{"line":43,"column":0},"source":"index.js","original":{"line":57,"column":4}},{"name":"$","generated":{"line":43,"column":4},"source":"index.js","original":{"line":57,"column":4}},{"generated":{"line":43,"column":5},"source":"index.js","original":{"line":57,"column":5}},{"generated":{"line":43,"column":6},"source":"index.js","original":{"line":57,"column":6}},{"generated":{"line":43,"column":21},"source":"index.js","original":{"line":57,"column":5}},{"generated":{"line":43,"column":22},"source":"index.js","original":{"line":57,"column":4}},{"name":"hide","generated":{"line":43,"column":23},"source":"index.js","original":{"line":57,"column":23}},{"generated":{"line":43,"column":27},"source":"index.js","original":{"line":57,"column":4}},{"generated":{"line":43,"column":28},"source":"index.js","original":{"line":57,"column":28}},{"name":"duration","generated":{"line":44,"column":0},"source":"index.js","original":{"line":58,"column":6}},{"name":"duration","generated":{"line":44,"column":6},"source":"index.js","original":{"line":58,"column":6}},{"generated":{"line":44,"column":14},"source":"index.js","original":{"line":58,"column":14}},{"generated":{"line":44,"column":16},"source":"index.js","original":{"line":58,"column":16}},{"generated":{"line":45,"column":0},"source":"index.js","original":{"line":57,"column":28}},{"generated":{"line":45,"column":5},"source":"index.js","original":{"line":57,"column":4}},{"generated":{"line":46,"column":0},"source":"index.js","original":{"line":60,"column":3}},{"generated":{"line":47,"column":0},"source":"index.js","original":{"line":61,"column":1}}],"sources":{"index.js":"//Some script to implement smooth scrolling on all browsers\n\n$(document).ready(function() {\n  // Add smooth scrolling to all links\n  $(\"a\").on(\"click\", function(event) {\n    // Make sure this.hash has a value before overriding default behavior\n    if (this.hash !== \"\") {\n      // Prevent default anchor click behavior\n      event.preventDefault();\n\n      // Store hash\n      var hash = this.hash;\n\n      // Using jQuery's animate() method to add smooth page scroll\n      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area\n      $(\"html, body\").animate(\n        {\n          scrollTop: $(hash).offset().top\n        },\n        800,\n        function() {\n          // Add hash (#) to URL when done scrolling (default click behavior)\n          window.location.hash = hash;\n        }\n      );\n    } // End if\n  });\n});\n\n$(document).ready(function(event) {\n  $(\".navbar-brand\").hide();\n});\n\n//Let's try and capture the data spy\n$(window).scroll(function(event) {\n  var scrolled_val = $(document)\n    .scrollTop()\n    .valueOf();\n\n  if (\n    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(\n      navigator.userAgent\n    )\n  ) {\n    logoDisplay(scrolled_val, 200);\n  } else {\n    logoDisplay(scrolled_val, 500);\n  }\n});\n\nfunction logoDisplay(val, param) {\n  if (val > param) {\n    $(\".navbar-brand\").show({\n      duration: 200\n    });\n  } else {\n    $(\".navbar-brand\").hide({\n      duration: 200\n    });\n  }\n}\n"},"lineCount":null}},"error":null,"hash":"7b825a9c6cd5ace392df4866c0bf3fec","cacheData":{"env":{}}}
+{
+  "id": "index.js",
+  "dependencies": [
+    {
+      "name": "/Users/marktiddy/Sites/Music Mentoring/music-mentoring/package.json",
+      "includedInParent": true,
+      "mtime": 1588087560955
+    }
+  ],
+  "generated": {
+    "js": "//Some script to implement smooth scrolling on all browsers\n$(document).ready(function () {\n  // Add smooth scrolling to all links\n  $(\"a\").on(\"click\", function (event) {\n    // Make sure this.hash has a value before overriding default behavior\n    if (this.hash !== \"\") {\n      // Prevent default anchor click behavior\n      event.preventDefault(); // Store hash\n\n      var hash = this.hash; // Using jQuery's animate() method to add smooth page scroll\n      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area\n\n      $(\"html, body\").animate({\n        scrollTop: $(hash).offset().top\n      }, 800, function () {\n        // Add hash (#) to URL when done scrolling (default click behavior)\n        window.location.hash = hash;\n      });\n    } // End if\n\n  });\n});\n$(document).ready(function (event) {\n  $(\".navbar-brand\").hide();\n}); //Let's try and capture the data spy\n\n$(window).scroll(function (event) {\n  var scrolled_val = $(document).scrollTop().valueOf();\n\n  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {\n    logoDisplay(scrolled_val, 200);\n  } else {\n    logoDisplay(scrolled_val, 500);\n  }\n});\n\nfunction logoDisplay(val, param) {\n  if (val > param) {\n    $(\".navbar-brand\").show({\n      duration: 200\n    });\n  } else {\n    $(\".navbar-brand\").hide({\n      duration: 200\n    });\n  }\n}"
+  },
+  "sourceMaps": {
+    "js": {
+      "mappings": [
+        {
+          "generated": { "line": 1, "column": 0 },
+          "source": "index.js",
+          "original": { "line": 1, "column": 0 }
+        },
+        {
+          "name": "$",
+          "generated": { "line": 2, "column": 0 },
+          "source": "index.js",
+          "original": { "line": 3, "column": 0 }
+        },
+        {
+          "generated": { "line": 2, "column": 1 },
+          "source": "index.js",
+          "original": { "line": 3, "column": 1 }
+        },
+        {
+          "name": "document",
+          "generated": { "line": 2, "column": 2 },
+          "source": "index.js",
+          "original": { "line": 3, "column": 2 }
+        },
+        {
+          "generated": { "line": 2, "column": 10 },
+          "source": "index.js",
+          "original": { "line": 3, "column": 1 }
+        },
+        {
+          "generated": { "line": 2, "column": 11 },
+          "source": "index.js",
+          "original": { "line": 3, "column": 0 }
+        },
+        {
+          "name": "ready",
+          "generated": { "line": 2, "column": 12 },
+          "source": "index.js",
+          "original": { "line": 3, "column": 12 }
+        },
+        {
+          "generated": { "line": 2, "column": 17 },
+          "source": "index.js",
+          "original": { "line": 3, "column": 0 }
+        },
+        {
+          "generated": { "line": 2, "column": 18 },
+          "source": "index.js",
+          "original": { "line": 3, "column": 18 }
+        },
+        {
+          "generated": { "line": 2, "column": 30 },
+          "source": "index.js",
+          "original": { "line": 3, "column": 30 }
+        },
+        {
+          "generated": { "line": 3, "column": 0 },
+          "source": "index.js",
+          "original": { "line": 4, "column": 2 }
+        },
+        {
+          "name": "$",
+          "generated": { "line": 4, "column": 0 },
+          "source": "index.js",
+          "original": { "line": 5, "column": 2 }
+        },
+        {
+          "name": "$",
+          "generated": { "line": 4, "column": 2 },
+          "source": "index.js",
+          "original": { "line": 5, "column": 2 }
+        },
+        {
+          "generated": { "line": 4, "column": 3 },
+          "source": "index.js",
+          "original": { "line": 5, "column": 3 }
+        },
+        {
+          "generated": { "line": 4, "column": 4 },
+          "source": "index.js",
+          "original": { "line": 5, "column": 4 }
+        },
+        {
+          "generated": { "line": 4, "column": 7 },
+          "source": "index.js",
+          "original": { "line": 5, "column": 3 }
+        },
+        {
+          "generated": { "line": 4, "column": 8 },
+          "source": "index.js",
+          "original": { "line": 5, "column": 2 }
+        },
+        {
+          "name": "on",
+          "generated": { "line": 4, "column": 9 },
+          "source": "index.js",
+          "original": { "line": 5, "column": 9 }
+        },
+        {
+          "generated": { "line": 4, "column": 11 },
+          "source": "index.js",
+          "original": { "line": 5, "column": 2 }
+        },
+        {
+          "generated": { "line": 4, "column": 12 },
+          "source": "index.js",
+          "original": { "line": 5, "column": 12 }
+        },
+        {
+          "generated": { "line": 4, "column": 19 },
+          "source": "index.js",
+          "original": { "line": 5, "column": 2 }
+        },
+        {
+          "generated": { "line": 4, "column": 21 },
+          "source": "index.js",
+          "original": { "line": 5, "column": 21 }
+        },
+        {
+          "name": "event",
+          "generated": { "line": 4, "column": 31 },
+          "source": "index.js",
+          "original": { "line": 5, "column": 31 }
+        },
+        {
+          "generated": { "line": 4, "column": 36 },
+          "source": "index.js",
+          "original": { "line": 5, "column": 21 }
+        },
+        {
+          "generated": { "line": 4, "column": 38 },
+          "source": "index.js",
+          "original": { "line": 5, "column": 38 }
+        },
+        {
+          "generated": { "line": 5, "column": 0 },
+          "source": "index.js",
+          "original": { "line": 6, "column": 4 }
+        },
+        {
+          "generated": { "line": 6, "column": 0 },
+          "source": "index.js",
+          "original": { "line": 7, "column": 4 }
+        },
+        {
+          "generated": { "line": 6, "column": 8 },
+          "source": "index.js",
+          "original": { "line": 7, "column": 8 }
+        },
+        {
+          "name": "hash",
+          "generated": { "line": 6, "column": 13 },
+          "source": "index.js",
+          "original": { "line": 7, "column": 13 }
+        },
+        {
+          "generated": { "line": 6, "column": 17 },
+          "source": "index.js",
+          "original": { "line": 7, "column": 8 }
+        },
+        {
+          "generated": { "line": 6, "column": 22 },
+          "source": "index.js",
+          "original": { "line": 7, "column": 22 }
+        },
+        {
+          "generated": { "line": 6, "column": 24 },
+          "source": "index.js",
+          "original": { "line": 7, "column": 4 }
+        },
+        {
+          "generated": { "line": 6, "column": 26 },
+          "source": "index.js",
+          "original": { "line": 7, "column": 26 }
+        },
+        {
+          "generated": { "line": 7, "column": 0 },
+          "source": "index.js",
+          "original": { "line": 8, "column": 6 }
+        },
+        {
+          "name": "event",
+          "generated": { "line": 8, "column": 0 },
+          "source": "index.js",
+          "original": { "line": 9, "column": 6 }
+        },
+        {
+          "name": "event",
+          "generated": { "line": 8, "column": 6 },
+          "source": "index.js",
+          "original": { "line": 9, "column": 6 }
+        },
+        {
+          "generated": { "line": 8, "column": 11 },
+          "source": "index.js",
+          "original": { "line": 9, "column": 11 }
+        },
+        {
+          "name": "preventDefault",
+          "generated": { "line": 8, "column": 12 },
+          "source": "index.js",
+          "original": { "line": 9, "column": 12 }
+        },
+        {
+          "generated": { "line": 8, "column": 26 },
+          "source": "index.js",
+          "original": { "line": 9, "column": 6 }
+        },
+        {
+          "generated": { "line": 8, "column": 29 },
+          "source": "index.js",
+          "original": { "line": 7, "column": 26 }
+        },
+        {
+          "generated": { "line": 8, "column": 30 },
+          "source": "index.js",
+          "original": { "line": 11, "column": 6 }
+        },
+        {
+          "generated": { "line": 10, "column": 0 },
+          "source": "index.js",
+          "original": { "line": 12, "column": 6 }
+        },
+        {
+          "name": "hash",
+          "generated": { "line": 10, "column": 10 },
+          "source": "index.js",
+          "original": { "line": 12, "column": 10 }
+        },
+        {
+          "generated": { "line": 10, "column": 14 },
+          "source": "index.js",
+          "original": { "line": 12, "column": 14 }
+        },
+        {
+          "generated": { "line": 10, "column": 17 },
+          "source": "index.js",
+          "original": { "line": 12, "column": 17 }
+        },
+        {
+          "name": "hash",
+          "generated": { "line": 10, "column": 22 },
+          "source": "index.js",
+          "original": { "line": 12, "column": 22 }
+        },
+        {
+          "generated": { "line": 10, "column": 26 },
+          "source": "index.js",
+          "original": { "line": 12, "column": 6 }
+        },
+        {
+          "generated": { "line": 10, "column": 27 },
+          "source": "index.js",
+          "original": { "line": 7, "column": 26 }
+        },
+        {
+          "generated": { "line": 10, "column": 28 },
+          "source": "index.js",
+          "original": { "line": 14, "column": 6 }
+        },
+        {
+          "generated": { "line": 11, "column": 0 },
+          "source": "index.js",
+          "original": { "line": 15, "column": 6 }
+        },
+        {
+          "name": "$",
+          "generated": { "line": 13, "column": 0 },
+          "source": "index.js",
+          "original": { "line": 16, "column": 6 }
+        },
+        {
+          "name": "$",
+          "generated": { "line": 13, "column": 6 },
+          "source": "index.js",
+          "original": { "line": 16, "column": 6 }
+        },
+        {
+          "generated": { "line": 13, "column": 7 },
+          "source": "index.js",
+          "original": { "line": 16, "column": 7 }
+        },
+        {
+          "generated": { "line": 13, "column": 8 },
+          "source": "index.js",
+          "original": { "line": 16, "column": 8 }
+        },
+        {
+          "generated": { "line": 13, "column": 20 },
+          "source": "index.js",
+          "original": { "line": 16, "column": 7 }
+        },
+        {
+          "generated": { "line": 13, "column": 21 },
+          "source": "index.js",
+          "original": { "line": 16, "column": 6 }
+        },
+        {
+          "name": "animate",
+          "generated": { "line": 13, "column": 22 },
+          "source": "index.js",
+          "original": { "line": 16, "column": 22 }
+        },
+        {
+          "generated": { "line": 13, "column": 29 },
+          "source": "index.js",
+          "original": { "line": 16, "column": 6 }
+        },
+        {
+          "generated": { "line": 13, "column": 30 },
+          "source": "index.js",
+          "original": { "line": 17, "column": 8 }
+        },
+        {
+          "name": "scrollTop",
+          "generated": { "line": 14, "column": 0 },
+          "source": "index.js",
+          "original": { "line": 18, "column": 10 }
+        },
+        {
+          "name": "scrollTop",
+          "generated": { "line": 14, "column": 8 },
+          "source": "index.js",
+          "original": { "line": 18, "column": 10 }
+        },
+        {
+          "generated": { "line": 14, "column": 17 },
+          "source": "index.js",
+          "original": { "line": 18, "column": 19 }
+        },
+        {
+          "name": "$",
+          "generated": { "line": 14, "column": 19 },
+          "source": "index.js",
+          "original": { "line": 18, "column": 21 }
+        },
+        {
+          "generated": { "line": 14, "column": 20 },
+          "source": "index.js",
+          "original": { "line": 18, "column": 22 }
+        },
+        {
+          "name": "hash",
+          "generated": { "line": 14, "column": 21 },
+          "source": "index.js",
+          "original": { "line": 18, "column": 23 }
+        },
+        {
+          "generated": { "line": 14, "column": 25 },
+          "source": "index.js",
+          "original": { "line": 18, "column": 22 }
+        },
+        {
+          "generated": { "line": 14, "column": 26 },
+          "source": "index.js",
+          "original": { "line": 18, "column": 21 }
+        },
+        {
+          "name": "offset",
+          "generated": { "line": 14, "column": 27 },
+          "source": "index.js",
+          "original": { "line": 18, "column": 29 }
+        },
+        {
+          "generated": { "line": 14, "column": 33 },
+          "source": "index.js",
+          "original": { "line": 18, "column": 21 }
+        },
+        {
+          "name": "top",
+          "generated": { "line": 14, "column": 36 },
+          "source": "index.js",
+          "original": { "line": 18, "column": 38 }
+        },
+        {
+          "generated": { "line": 15, "column": 0 },
+          "source": "index.js",
+          "original": { "line": 17, "column": 8 }
+        },
+        {
+          "generated": { "line": 15, "column": 7 },
+          "source": "index.js",
+          "original": { "line": 16, "column": 6 }
+        },
+        {
+          "generated": { "line": 15, "column": 9 },
+          "source": "index.js",
+          "original": { "line": 20, "column": 8 }
+        },
+        {
+          "generated": { "line": 15, "column": 12 },
+          "source": "index.js",
+          "original": { "line": 16, "column": 6 }
+        },
+        {
+          "generated": { "line": 15, "column": 14 },
+          "source": "index.js",
+          "original": { "line": 21, "column": 8 }
+        },
+        {
+          "generated": { "line": 15, "column": 26 },
+          "source": "index.js",
+          "original": { "line": 21, "column": 20 }
+        },
+        {
+          "generated": { "line": 16, "column": 0 },
+          "source": "index.js",
+          "original": { "line": 22, "column": 10 }
+        },
+        {
+          "name": "window",
+          "generated": { "line": 17, "column": 0 },
+          "source": "index.js",
+          "original": { "line": 23, "column": 10 }
+        },
+        {
+          "name": "window",
+          "generated": { "line": 17, "column": 8 },
+          "source": "index.js",
+          "original": { "line": 23, "column": 10 }
+        },
+        {
+          "generated": { "line": 17, "column": 14 },
+          "source": "index.js",
+          "original": { "line": 23, "column": 16 }
+        },
+        {
+          "name": "location",
+          "generated": { "line": 17, "column": 15 },
+          "source": "index.js",
+          "original": { "line": 23, "column": 17 }
+        },
+        {
+          "generated": { "line": 17, "column": 23 },
+          "source": "index.js",
+          "original": { "line": 23, "column": 10 }
+        },
+        {
+          "name": "hash",
+          "generated": { "line": 17, "column": 24 },
+          "source": "index.js",
+          "original": { "line": 23, "column": 26 }
+        },
+        {
+          "generated": { "line": 17, "column": 28 },
+          "source": "index.js",
+          "original": { "line": 23, "column": 10 }
+        },
+        {
+          "name": "hash",
+          "generated": { "line": 17, "column": 31 },
+          "source": "index.js",
+          "original": { "line": 23, "column": 33 }
+        },
+        {
+          "generated": { "line": 17, "column": 35 },
+          "source": "index.js",
+          "original": { "line": 23, "column": 10 }
+        },
+        {
+          "generated": { "line": 18, "column": 0 },
+          "source": "index.js",
+          "original": { "line": 24, "column": 9 }
+        },
+        {
+          "generated": { "line": 18, "column": 7 },
+          "source": "index.js",
+          "original": { "line": 16, "column": 6 }
+        },
+        {
+          "generated": { "line": 19, "column": 0 },
+          "source": "index.js",
+          "original": { "line": 26, "column": 5 }
+        },
+        {
+          "generated": { "line": 19, "column": 5 },
+          "source": "index.js",
+          "original": { "line": 5, "column": 38 }
+        },
+        {
+          "generated": { "line": 19, "column": 6 },
+          "source": "index.js",
+          "original": { "line": 26, "column": 6 }
+        },
+        {
+          "generated": { "line": 21, "column": 0 },
+          "source": "index.js",
+          "original": { "line": 27, "column": 3 }
+        },
+        {
+          "generated": { "line": 21, "column": 3 },
+          "source": "index.js",
+          "original": { "line": 5, "column": 2 }
+        },
+        {
+          "generated": { "line": 22, "column": 0 },
+          "source": "index.js",
+          "original": { "line": 28, "column": 1 }
+        },
+        {
+          "generated": { "line": 22, "column": 1 },
+          "source": "index.js",
+          "original": { "line": 3, "column": 0 }
+        },
+        {
+          "name": "$",
+          "generated": { "line": 23, "column": 0 },
+          "source": "index.js",
+          "original": { "line": 30, "column": 0 }
+        },
+        {
+          "generated": { "line": 23, "column": 1 },
+          "source": "index.js",
+          "original": { "line": 30, "column": 1 }
+        },
+        {
+          "name": "document",
+          "generated": { "line": 23, "column": 2 },
+          "source": "index.js",
+          "original": { "line": 30, "column": 2 }
+        },
+        {
+          "generated": { "line": 23, "column": 10 },
+          "source": "index.js",
+          "original": { "line": 30, "column": 1 }
+        },
+        {
+          "generated": { "line": 23, "column": 11 },
+          "source": "index.js",
+          "original": { "line": 30, "column": 0 }
+        },
+        {
+          "name": "ready",
+          "generated": { "line": 23, "column": 12 },
+          "source": "index.js",
+          "original": { "line": 30, "column": 12 }
+        },
+        {
+          "generated": { "line": 23, "column": 17 },
+          "source": "index.js",
+          "original": { "line": 30, "column": 0 }
+        },
+        {
+          "generated": { "line": 23, "column": 18 },
+          "source": "index.js",
+          "original": { "line": 30, "column": 18 }
+        },
+        {
+          "name": "event",
+          "generated": { "line": 23, "column": 28 },
+          "source": "index.js",
+          "original": { "line": 30, "column": 28 }
+        },
+        {
+          "generated": { "line": 23, "column": 33 },
+          "source": "index.js",
+          "original": { "line": 30, "column": 18 }
+        },
+        {
+          "generated": { "line": 23, "column": 35 },
+          "source": "index.js",
+          "original": { "line": 30, "column": 35 }
+        },
+        {
+          "name": "$",
+          "generated": { "line": 24, "column": 0 },
+          "source": "index.js",
+          "original": { "line": 31, "column": 2 }
+        },
+        {
+          "name": "$",
+          "generated": { "line": 24, "column": 2 },
+          "source": "index.js",
+          "original": { "line": 31, "column": 2 }
+        },
+        {
+          "generated": { "line": 24, "column": 3 },
+          "source": "index.js",
+          "original": { "line": 31, "column": 3 }
+        },
+        {
+          "generated": { "line": 24, "column": 4 },
+          "source": "index.js",
+          "original": { "line": 31, "column": 4 }
+        },
+        {
+          "generated": { "line": 24, "column": 19 },
+          "source": "index.js",
+          "original": { "line": 31, "column": 3 }
+        },
+        {
+          "generated": { "line": 24, "column": 20 },
+          "source": "index.js",
+          "original": { "line": 31, "column": 2 }
+        },
+        {
+          "name": "hide",
+          "generated": { "line": 24, "column": 21 },
+          "source": "index.js",
+          "original": { "line": 31, "column": 21 }
+        },
+        {
+          "generated": { "line": 24, "column": 25 },
+          "source": "index.js",
+          "original": { "line": 31, "column": 2 }
+        },
+        {
+          "generated": { "line": 25, "column": 0 },
+          "source": "index.js",
+          "original": { "line": 32, "column": 1 }
+        },
+        {
+          "generated": { "line": 25, "column": 1 },
+          "source": "index.js",
+          "original": { "line": 30, "column": 0 }
+        },
+        {
+          "generated": { "line": 25, "column": 4 },
+          "source": "index.js",
+          "original": { "line": 34, "column": 0 }
+        },
+        {
+          "name": "$",
+          "generated": { "line": 27, "column": 0 },
+          "source": "index.js",
+          "original": { "line": 35, "column": 0 }
+        },
+        {
+          "generated": { "line": 27, "column": 1 },
+          "source": "index.js",
+          "original": { "line": 35, "column": 1 }
+        },
+        {
+          "name": "window",
+          "generated": { "line": 27, "column": 2 },
+          "source": "index.js",
+          "original": { "line": 35, "column": 2 }
+        },
+        {
+          "generated": { "line": 27, "column": 8 },
+          "source": "index.js",
+          "original": { "line": 35, "column": 1 }
+        },
+        {
+          "generated": { "line": 27, "column": 9 },
+          "source": "index.js",
+          "original": { "line": 35, "column": 0 }
+        },
+        {
+          "name": "scroll",
+          "generated": { "line": 27, "column": 10 },
+          "source": "index.js",
+          "original": { "line": 35, "column": 10 }
+        },
+        {
+          "generated": { "line": 27, "column": 16 },
+          "source": "index.js",
+          "original": { "line": 35, "column": 0 }
+        },
+        {
+          "generated": { "line": 27, "column": 17 },
+          "source": "index.js",
+          "original": { "line": 35, "column": 17 }
+        },
+        {
+          "name": "event",
+          "generated": { "line": 27, "column": 27 },
+          "source": "index.js",
+          "original": { "line": 35, "column": 27 }
+        },
+        {
+          "generated": { "line": 27, "column": 32 },
+          "source": "index.js",
+          "original": { "line": 35, "column": 17 }
+        },
+        {
+          "generated": { "line": 27, "column": 34 },
+          "source": "index.js",
+          "original": { "line": 35, "column": 34 }
+        },
+        {
+          "generated": { "line": 28, "column": 0 },
+          "source": "index.js",
+          "original": { "line": 36, "column": 2 }
+        },
+        {
+          "name": "scrolled_val",
+          "generated": { "line": 28, "column": 6 },
+          "source": "index.js",
+          "original": { "line": 36, "column": 6 }
+        },
+        {
+          "generated": { "line": 28, "column": 18 },
+          "source": "index.js",
+          "original": { "line": 36, "column": 18 }
+        },
+        {
+          "name": "$",
+          "generated": { "line": 28, "column": 21 },
+          "source": "index.js",
+          "original": { "line": 36, "column": 21 }
+        },
+        {
+          "generated": { "line": 28, "column": 22 },
+          "source": "index.js",
+          "original": { "line": 36, "column": 22 }
+        },
+        {
+          "name": "document",
+          "generated": { "line": 28, "column": 23 },
+          "source": "index.js",
+          "original": { "line": 36, "column": 23 }
+        },
+        {
+          "generated": { "line": 28, "column": 31 },
+          "source": "index.js",
+          "original": { "line": 36, "column": 22 }
+        },
+        {
+          "generated": { "line": 28, "column": 32 },
+          "source": "index.js",
+          "original": { "line": 36, "column": 21 }
+        },
+        {
+          "name": "scrollTop",
+          "generated": { "line": 28, "column": 33 },
+          "source": "index.js",
+          "original": { "line": 36, "column": 33 }
+        },
+        {
+          "generated": { "line": 28, "column": 42 },
+          "source": "index.js",
+          "original": { "line": 36, "column": 21 }
+        },
+        {
+          "name": "valueOf",
+          "generated": { "line": 28, "column": 45 },
+          "source": "index.js",
+          "original": { "line": 36, "column": 45 }
+        },
+        {
+          "generated": { "line": 28, "column": 52 },
+          "source": "index.js",
+          "original": { "line": 36, "column": 21 }
+        },
+        {
+          "generated": { "line": 28, "column": 54 },
+          "source": "index.js",
+          "original": { "line": 36, "column": 2 }
+        },
+        {
+          "generated": { "line": 30, "column": 0 },
+          "source": "index.js",
+          "original": { "line": 38, "column": 2 }
+        },
+        {
+          "generated": { "line": 30, "column": 6 },
+          "source": "index.js",
+          "original": { "line": 39, "column": 4 }
+        },
+        {
+          "name": "test",
+          "generated": { "line": 30, "column": 71 },
+          "source": "index.js",
+          "original": { "line": 39, "column": 69 }
+        },
+        {
+          "generated": { "line": 30, "column": 75 },
+          "source": "index.js",
+          "original": { "line": 39, "column": 4 }
+        },
+        {
+          "name": "navigator",
+          "generated": { "line": 30, "column": 76 },
+          "source": "index.js",
+          "original": { "line": 40, "column": 6 }
+        },
+        {
+          "generated": { "line": 30, "column": 85 },
+          "source": "index.js",
+          "original": { "line": 40, "column": 15 }
+        },
+        {
+          "name": "userAgent",
+          "generated": { "line": 30, "column": 86 },
+          "source": "index.js",
+          "original": { "line": 40, "column": 16 }
+        },
+        {
+          "generated": { "line": 30, "column": 95 },
+          "source": "index.js",
+          "original": { "line": 39, "column": 4 }
+        },
+        {
+          "generated": { "line": 30, "column": 96 },
+          "source": "index.js",
+          "original": { "line": 38, "column": 2 }
+        },
+        {
+          "generated": { "line": 30, "column": 98 },
+          "source": "index.js",
+          "original": { "line": 42, "column": 4 }
+        },
+        {
+          "name": "logoDisplay",
+          "generated": { "line": 31, "column": 0 },
+          "source": "index.js",
+          "original": { "line": 43, "column": 4 }
+        },
+        {
+          "name": "logoDisplay",
+          "generated": { "line": 31, "column": 4 },
+          "source": "index.js",
+          "original": { "line": 43, "column": 4 }
+        },
+        {
+          "generated": { "line": 31, "column": 15 },
+          "source": "index.js",
+          "original": { "line": 43, "column": 15 }
+        },
+        {
+          "name": "scrolled_val",
+          "generated": { "line": 31, "column": 16 },
+          "source": "index.js",
+          "original": { "line": 43, "column": 16 }
+        },
+        {
+          "generated": { "line": 31, "column": 28 },
+          "source": "index.js",
+          "original": { "line": 43, "column": 15 }
+        },
+        {
+          "generated": { "line": 31, "column": 30 },
+          "source": "index.js",
+          "original": { "line": 43, "column": 30 }
+        },
+        {
+          "generated": { "line": 31, "column": 33 },
+          "source": "index.js",
+          "original": { "line": 43, "column": 15 }
+        },
+        {
+          "generated": { "line": 31, "column": 34 },
+          "source": "index.js",
+          "original": { "line": 43, "column": 4 }
+        },
+        {
+          "generated": { "line": 32, "column": 0 },
+          "source": "index.js",
+          "original": { "line": 44, "column": 3 }
+        },
+        {
+          "generated": { "line": 32, "column": 3 },
+          "source": "index.js",
+          "original": { "line": 38, "column": 2 }
+        },
+        {
+          "generated": { "line": 32, "column": 9 },
+          "source": "index.js",
+          "original": { "line": 44, "column": 9 }
+        },
+        {
+          "name": "logoDisplay",
+          "generated": { "line": 33, "column": 0 },
+          "source": "index.js",
+          "original": { "line": 45, "column": 4 }
+        },
+        {
+          "name": "logoDisplay",
+          "generated": { "line": 33, "column": 4 },
+          "source": "index.js",
+          "original": { "line": 45, "column": 4 }
+        },
+        {
+          "generated": { "line": 33, "column": 15 },
+          "source": "index.js",
+          "original": { "line": 45, "column": 15 }
+        },
+        {
+          "name": "scrolled_val",
+          "generated": { "line": 33, "column": 16 },
+          "source": "index.js",
+          "original": { "line": 45, "column": 16 }
+        },
+        {
+          "generated": { "line": 33, "column": 28 },
+          "source": "index.js",
+          "original": { "line": 45, "column": 15 }
+        },
+        {
+          "generated": { "line": 33, "column": 30 },
+          "source": "index.js",
+          "original": { "line": 45, "column": 30 }
+        },
+        {
+          "generated": { "line": 33, "column": 33 },
+          "source": "index.js",
+          "original": { "line": 45, "column": 15 }
+        },
+        {
+          "generated": { "line": 33, "column": 34 },
+          "source": "index.js",
+          "original": { "line": 45, "column": 4 }
+        },
+        {
+          "generated": { "line": 34, "column": 0 },
+          "source": "index.js",
+          "original": { "line": 46, "column": 3 }
+        },
+        {
+          "generated": { "line": 35, "column": 0 },
+          "source": "index.js",
+          "original": { "line": 47, "column": 1 }
+        },
+        {
+          "generated": { "line": 35, "column": 1 },
+          "source": "index.js",
+          "original": { "line": 35, "column": 0 }
+        },
+        {
+          "generated": { "line": 37, "column": 0 },
+          "source": "index.js",
+          "original": { "line": 49, "column": 0 }
+        },
+        {
+          "name": "logoDisplay",
+          "generated": { "line": 37, "column": 9 },
+          "source": "index.js",
+          "original": { "line": 49, "column": 9 }
+        },
+        {
+          "generated": { "line": 37, "column": 20 },
+          "source": "index.js",
+          "original": { "line": 49, "column": 0 }
+        },
+        {
+          "name": "val",
+          "generated": { "line": 37, "column": 21 },
+          "source": "index.js",
+          "original": { "line": 49, "column": 21 }
+        },
+        {
+          "generated": { "line": 37, "column": 24 },
+          "source": "index.js",
+          "original": { "line": 49, "column": 0 }
+        },
+        {
+          "name": "param",
+          "generated": { "line": 37, "column": 26 },
+          "source": "index.js",
+          "original": { "line": 49, "column": 26 }
+        },
+        {
+          "generated": { "line": 37, "column": 31 },
+          "source": "index.js",
+          "original": { "line": 49, "column": 0 }
+        },
+        {
+          "generated": { "line": 37, "column": 33 },
+          "source": "index.js",
+          "original": { "line": 49, "column": 33 }
+        },
+        {
+          "generated": { "line": 38, "column": 0 },
+          "source": "index.js",
+          "original": { "line": 50, "column": 2 }
+        },
+        {
+          "name": "val",
+          "generated": { "line": 38, "column": 6 },
+          "source": "index.js",
+          "original": { "line": 50, "column": 6 }
+        },
+        {
+          "generated": { "line": 38, "column": 9 },
+          "source": "index.js",
+          "original": { "line": 50, "column": 9 }
+        },
+        {
+          "name": "param",
+          "generated": { "line": 38, "column": 12 },
+          "source": "index.js",
+          "original": { "line": 50, "column": 12 }
+        },
+        {
+          "generated": { "line": 38, "column": 17 },
+          "source": "index.js",
+          "original": { "line": 50, "column": 2 }
+        },
+        {
+          "generated": { "line": 38, "column": 19 },
+          "source": "index.js",
+          "original": { "line": 50, "column": 19 }
+        },
+        {
+          "name": "$",
+          "generated": { "line": 39, "column": 0 },
+          "source": "index.js",
+          "original": { "line": 51, "column": 4 }
+        },
+        {
+          "name": "$",
+          "generated": { "line": 39, "column": 4 },
+          "source": "index.js",
+          "original": { "line": 51, "column": 4 }
+        },
+        {
+          "generated": { "line": 39, "column": 5 },
+          "source": "index.js",
+          "original": { "line": 51, "column": 5 }
+        },
+        {
+          "generated": { "line": 39, "column": 6 },
+          "source": "index.js",
+          "original": { "line": 51, "column": 6 }
+        },
+        {
+          "generated": { "line": 39, "column": 21 },
+          "source": "index.js",
+          "original": { "line": 51, "column": 5 }
+        },
+        {
+          "generated": { "line": 39, "column": 22 },
+          "source": "index.js",
+          "original": { "line": 51, "column": 4 }
+        },
+        {
+          "name": "show",
+          "generated": { "line": 39, "column": 23 },
+          "source": "index.js",
+          "original": { "line": 51, "column": 23 }
+        },
+        {
+          "generated": { "line": 39, "column": 27 },
+          "source": "index.js",
+          "original": { "line": 51, "column": 4 }
+        },
+        {
+          "generated": { "line": 39, "column": 28 },
+          "source": "index.js",
+          "original": { "line": 51, "column": 28 }
+        },
+        {
+          "name": "duration",
+          "generated": { "line": 40, "column": 0 },
+          "source": "index.js",
+          "original": { "line": 52, "column": 6 }
+        },
+        {
+          "name": "duration",
+          "generated": { "line": 40, "column": 6 },
+          "source": "index.js",
+          "original": { "line": 52, "column": 6 }
+        },
+        {
+          "generated": { "line": 40, "column": 14 },
+          "source": "index.js",
+          "original": { "line": 52, "column": 14 }
+        },
+        {
+          "generated": { "line": 40, "column": 16 },
+          "source": "index.js",
+          "original": { "line": 52, "column": 16 }
+        },
+        {
+          "generated": { "line": 41, "column": 0 },
+          "source": "index.js",
+          "original": { "line": 51, "column": 28 }
+        },
+        {
+          "generated": { "line": 41, "column": 5 },
+          "source": "index.js",
+          "original": { "line": 51, "column": 4 }
+        },
+        {
+          "generated": { "line": 42, "column": 0 },
+          "source": "index.js",
+          "original": { "line": 54, "column": 3 }
+        },
+        {
+          "generated": { "line": 42, "column": 3 },
+          "source": "index.js",
+          "original": { "line": 50, "column": 2 }
+        },
+        {
+          "generated": { "line": 42, "column": 9 },
+          "source": "index.js",
+          "original": { "line": 54, "column": 9 }
+        },
+        {
+          "name": "$",
+          "generated": { "line": 43, "column": 0 },
+          "source": "index.js",
+          "original": { "line": 55, "column": 4 }
+        },
+        {
+          "name": "$",
+          "generated": { "line": 43, "column": 4 },
+          "source": "index.js",
+          "original": { "line": 55, "column": 4 }
+        },
+        {
+          "generated": { "line": 43, "column": 5 },
+          "source": "index.js",
+          "original": { "line": 55, "column": 5 }
+        },
+        {
+          "generated": { "line": 43, "column": 6 },
+          "source": "index.js",
+          "original": { "line": 55, "column": 6 }
+        },
+        {
+          "generated": { "line": 43, "column": 21 },
+          "source": "index.js",
+          "original": { "line": 55, "column": 5 }
+        },
+        {
+          "generated": { "line": 43, "column": 22 },
+          "source": "index.js",
+          "original": { "line": 55, "column": 4 }
+        },
+        {
+          "name": "hide",
+          "generated": { "line": 43, "column": 23 },
+          "source": "index.js",
+          "original": { "line": 55, "column": 23 }
+        },
+        {
+          "generated": { "line": 43, "column": 27 },
+          "source": "index.js",
+          "original": { "line": 55, "column": 4 }
+        },
+        {
+          "generated": { "line": 43, "column": 28 },
+          "source": "index.js",
+          "original": { "line": 55, "column": 28 }
+        },
+        {
+          "name": "duration",
+          "generated": { "line": 44, "column": 0 },
+          "source": "index.js",
+          "original": { "line": 56, "column": 6 }
+        },
+        {
+          "name": "duration",
+          "generated": { "line": 44, "column": 6 },
+          "source": "index.js",
+          "original": { "line": 56, "column": 6 }
+        },
+        {
+          "generated": { "line": 44, "column": 14 },
+          "source": "index.js",
+          "original": { "line": 56, "column": 14 }
+        },
+        {
+          "generated": { "line": 44, "column": 16 },
+          "source": "index.js",
+          "original": { "line": 56, "column": 16 }
+        },
+        {
+          "generated": { "line": 45, "column": 0 },
+          "source": "index.js",
+          "original": { "line": 55, "column": 28 }
+        },
+        {
+          "generated": { "line": 45, "column": 5 },
+          "source": "index.js",
+          "original": { "line": 55, "column": 4 }
+        },
+        {
+          "generated": { "line": 46, "column": 0 },
+          "source": "index.js",
+          "original": { "line": 58, "column": 3 }
+        },
+        {
+          "generated": { "line": 47, "column": 0 },
+          "source": "index.js",
+          "original": { "line": 59, "column": 1 }
+        }
+      ],
+      "sources": {
+        "index.js": "//Some script to implement smooth scrolling on all browsers\n\n$(document).ready(function () {\n  // Add smooth scrolling to all links\n  $(\"a\").on(\"click\", function (event) {\n    // Make sure this.hash has a value before overriding default behavior\n    if (this.hash !== \"\") {\n      // Prevent default anchor click behavior\n      event.preventDefault();\n\n      // Store hash\n      var hash = this.hash;\n\n      // Using jQuery's animate() method to add smooth page scroll\n      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area\n      $(\"html, body\").animate(\n        {\n          scrollTop: $(hash).offset().top,\n        },\n        800,\n        function () {\n          // Add hash (#) to URL when done scrolling (default click behavior)\n          window.location.hash = hash;\n        }\n      );\n    } // End if\n  });\n});\n\n$(document).ready(function (event) {\n  $(\".navbar-brand\").hide();\n});\n\n//Let's try and capture the data spy\n$(window).scroll(function (event) {\n  var scrolled_val = $(document).scrollTop().valueOf();\n\n  if (\n    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(\n      navigator.userAgent\n    )\n  ) {\n    logoDisplay(scrolled_val, 200);\n  } else {\n    logoDisplay(scrolled_val, 500);\n  }\n});\n\nfunction logoDisplay(val, param) {\n  if (val > param) {\n    $(\".navbar-brand\").show({\n      duration: 200,\n    });\n  } else {\n    $(\".navbar-brand\").hide({\n      duration: 200,\n    });\n  }\n}\n"
+      },
+      "lineCount": null
+    }
+  },
+  "error": null,
+  "hash": "a72b43b3e32539c10d5ba47b35a3382a",
+  "cacheData": { "env": {} }
+}
