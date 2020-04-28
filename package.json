@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/marktiddy/music-mentoring/issues"
   },
-  "homepage": "https://github.com/marktiddy/music-mentoring#readme"
+  "homepage": "https://github.com/marktiddy/music-mentoring#readme",
+  "dependencies": {
+    "aos": "^2.3.4",
+    "jquery": "^3.5.0",
+    "popper.js": "^1.16.1"
+  }
 }
