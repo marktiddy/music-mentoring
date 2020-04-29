@@ -1,6 +1,13 @@
+import ScrollReveal from "scrollreveal";
+
 //Some script to implement smooth scrolling on all browsers
 
 $(document).ready(function () {
+  ScrollReveal().reveal(".text-center");
+  ScrollReveal().reveal(".highlight-card");
+  ScrollReveal().reveal(".testimonals-section");
+  ScrollReveal().reveal("#contact-us");
+
   // Add smooth scrolling to all links
   $("a").on("click", function (event) {
     // Make sure this.hash has a value before overriding default behavior
