@@ -1,5 +1,3 @@
-const ScrollReveal = require("scrollreveal");
-
 //Some script to implement smooth scrolling on all browsers
 
 $(document).ready(function () {
