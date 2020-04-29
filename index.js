@@ -1,4 +1,4 @@
-import ScrollReveal from "scrollreveal";
+const ScrollReveal = require("scrollreveal");
 
 //Some script to implement smooth scrolling on all browsers
 
