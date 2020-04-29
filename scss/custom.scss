@@ -91,6 +91,14 @@ html {
   height: 35px;
 }
 
+.navbar-text {
+  color: $offBlack;
+}
+
+.navbar-text a {
+  color: $offBlack;
+}
+
 .video-card {
   border: 0;
 }
@@ -195,6 +203,10 @@ form input {
 
 .footer-logo {
   width: 30%;
+}
+
+.navbar-text {
+  color: $offBlack;
 }
 
 /* ----------------------------------------------
