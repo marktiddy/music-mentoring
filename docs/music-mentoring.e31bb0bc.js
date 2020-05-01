@@ -117,24 +117,32 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"index.js":[function(require,module,exports) {
+})({"js_config/mail.js":[function(require,module,exports) {
+var token = 'b2525a9a-f4ca-4bcb-8f4b-74595ae6fb7f';
+},{}],"index.js":[function(require,module,exports) {
+"use strict";
+
+var _mail = _interopRequireDefault(require("./js_config/mail"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 //Some script to implement smooth scrolling on all browsers
 $(document).ready(function () {
-  ScrollReveal().reveal(".text-center");
-  ScrollReveal().reveal(".highlight-card");
-  ScrollReveal().reveal(".testimonals-section");
-  ScrollReveal().reveal("#contact-us"); // Add smooth scrolling to all links
+  ScrollReveal().reveal('.text-center');
+  ScrollReveal().reveal('.highlight-card');
+  ScrollReveal().reveal('.testimonals-section');
+  ScrollReveal().reveal('#contact-us'); // Add smooth scrolling to all links
 
-  $("a").on("click", function (event) {
+  $('a').on('click', function (event) {
     // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
+    if (this.hash !== '') {
       // Prevent default anchor click behavior
       event.preventDefault(); // Store hash
 
       var hash = this.hash; // Using jQuery's animate() method to add smooth page scroll
       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
 
-      $("html, body").animate({
+      $('html, body').animate({
         scrollTop: $(hash).offset().top
       }, 800, function () {
         // Add hash (#) to URL when done scrolling (default click behavior)
@@ -145,7 +153,7 @@ $(document).ready(function () {
   });
 });
 $(document).ready(function (event) {
-  $(".navbar-brand").hide();
+  $('.navbar-brand').hide();
 }); //Let's try and capture the data spy
 
 $(window).scroll(function (event) {
@@ -160,16 +168,62 @@ $(window).scroll(function (event) {
 
 function logoDisplay(val, param) {
   if (val > param) {
-    $(".navbar-brand").show({
+    $('.navbar-brand').show({
       duration: 200
     });
   } else {
-    $(".navbar-brand").hide({
+    $('.navbar-brand').hide({
       duration: 200
     });
   }
-}
-},{}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+} //Email script
+
+
+$('#mentoring-contact-form').on('submit', function (event) {
+  event.preventDefault();
+  submitContactForm();
+});
+
+var submitContactForm = function submitContactForm(event) {
+  //jquery to get content
+  var name = $('#name-input').val();
+  var email = $('#email-input').val();
+  var message = $('#message-input').val();
+  console.log(_mail.default); // Send the email and display success
+
+  Email.send({
+    SecureToken: 'b2525a9a-f4ca-4bcb-8f4b-74595ae6fb7f',
+    To: 'dan@musicmentoring.live',
+    From: email,
+    Subject: "Website message from ".concat(name),
+    Body: message
+  }).then(function (message) {
+    if (message === 'OK') {
+      $('#success-message').fadeIn();
+      $('#mentoring-contact-form').fadeOut();
+      resetFormFields();
+    } else {
+      $('#error-message').fadeIn();
+      $('#mentoring-contact-form').fadeOut();
+      resetFormFields();
+    }
+  }); //empty fields and show empty form after time period
+};
+
+var resetFormFields = function resetFormFields() {
+  setTimeout(function () {
+    $('#success-message').fadeOut();
+    $('#error-message').fadeOut();
+    $('#mentoring-contact-form').fadeIn();
+    $('#name-input').val('');
+    $('#email-input').val('');
+    $('#message-input').val('');
+    name = '';
+    email = '';
+    message = '';
+  }, 6000);
+};
+},{"./js_config/mail":"js_config/mail.js"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -197,7 +251,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60175" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65302" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

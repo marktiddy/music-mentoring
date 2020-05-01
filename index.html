@@ -54,7 +54,7 @@
           <li class="nav-item">
             <a class="nav-link" href="#our-offer">Home</a>
           </li>
-         
+
           <li class="nav-item">
             <a
               class="nav-link"
@@ -72,7 +72,7 @@
           <li class="nav-item">
             <a
               class="nav-link"
-              href="https://www.facebook.com/tbyouthstudio"
+              href="https://www.facebook.com/musicmentoringuk/"
               target="_blank"
             >
               <i class="fa social-icon">&#xf082;</i>
@@ -81,14 +81,19 @@
           <li class="nav-item">
             <a
               class="nav-link"
-              href="https://www.instagram.com/tbsongwriting/"
+              href="https://www.instagram.com/music_mentoring/"
               target="_blank"
               ><i class="fa social-icon">&#xf16d;</i>
             </a>
           </li>
         </ul>
         <span class="navbar-text">
-          <button class="btn btn-sm bg-light dark-text">Make a Referral</button>
+          <button
+            class="btn btn-sm bg-light dark-text"
+            onClick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfmxfewiIYlFNQVdnQOrNcUHevkqeG7cpC0JSLjjQomKzdeCA/viewform?vc=0&c=0&w=1');"
+          >
+            Make a Referral
+          </button>
         </span>
       </div>
     </nav>
@@ -109,9 +114,9 @@
         />
       </div>
     </div>
-    <div class="jumbotron bg-grey text-center" >
+    <div class="jumbotron bg-grey text-center">
       <blockquote class="blockquote">
-        <p class="mb-0" >
+        <p class="mb-0">
           Music Mentoring has boosted my confidence, normally I'm shy. I use
           Garageband at home now and it's kept me off video games. I'd 100%
           recommend these sessions as it keeps you out of trouble
@@ -121,7 +126,7 @@
         </footer>
       </blockquote>
     </div>
-    <div ></div>
+    <div></div>
     <div class="container offer-container">
       <div class="row text-center">
         <div class="col">
@@ -248,6 +253,14 @@
               creativity and expression. This offers young people an immediate
               role model; a neutral party between parent and teacher, focusing
               solely on the young person's well being.
+            </p>
+            <p class="dark-text-p">
+              If you are looking to make a referral
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfmxfewiIYlFNQVdnQOrNcUHevkqeG7cpC0JSLjjQomKzdeCA/viewform?vc=0&c=0&w=1"
+                target="_blank"
+                >click here</a
+              >
             </p>
           </div>
           <div class="modal-footer">
@@ -390,7 +403,7 @@
     <!--END OF MODAL-->
 
     <!--TESTIMONALS SECTION-->
-    <div class="container testimonals-section" >
+    <div class="container testimonals-section">
       <div class="row text-center">
         <div class="col">
           <h2 class="light-text-title text-center">TESTIMONALS</h2>
@@ -525,7 +538,7 @@
             <h2 class="light-text-title text-center">CONTACT US</h2>
           </div>
         </div>
-        <form>
+        <form id="mentoring-contact-form">
           <div class="row">
             <div class="col-sm">
               <div class="form-group">
@@ -535,7 +548,7 @@
                   required
                   class="form-control"
                   id="name-input"
-                  placeholder="name@example.com"
+                  placeholder="David Bowie"
                 />
               </div>
               <div class="form-group">
@@ -560,10 +573,25 @@
               </div>
             </div>
           </div>
-          <div class="row"><div class="col text-right">
-            <button class="btn btn-light bg-light" type="submit">Send Message</button>
+          <div class="row">
+            <div class="col text-right">
+              <button class="btn btn-light bg-light" type="submit">
+                Send Message
+              </button>
+            </div>
           </div>
         </form>
+        <div class="row" id="success-message">
+          <div class="col">
+            Your message was sent sucessfully. We will aim to be in touch soon.
+          </div>
+        </div>
+        <div class="row" id="error-message">
+          <div class="col">
+            Sorry, we had a problem sending your message. Please try again
+            later.
+          </div>
+        </div>
         <div class="row">
           <div class="col"></div>
         </div>
@@ -642,6 +670,7 @@
     crossorigin="anonymous"
   ></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
 
   <script src="index.js"></script>
 </html>
