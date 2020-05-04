@@ -1,6 +1,3 @@
-<!--TODO LIST-->
-<!--HOOK UP FORM-->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -52,9 +49,10 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#our-offer">Home</a>
+            <a class="nav-link" data-toggle="modal" data-target="#about-modal"
+              >About Us</a
+            >
           </li>
-
           <li class="nav-item">
             <a
               class="nav-link"
@@ -86,6 +84,14 @@
               ><i class="fa social-icon">&#xf16d;</i>
             </a>
           </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="https://www.youtube.com/watch?v=sDDzS8Jmh2o&t=3s"
+              target="_blank"
+              ><i class="fa social-icon">&#xf16a;</i></a
+            >
+          </li>
         </ul>
         <span class="navbar-text">
           <button
@@ -115,15 +121,13 @@
       </div>
     </div>
     <div class="jumbotron bg-grey text-center">
-      <blockquote class="blockquote">
+      <blockquote class="blockquote" id="top-quote">
         <p class="mb-0">
-          Music Mentoring has boosted my confidence, normally I'm shy. I use
-          Garageband at home now and it's kept me off video games. I'd 100%
-          recommend these sessions as it keeps you out of trouble
+          "Matching mentors to the next generation of creatives"
         </p>
-        <footer class="blockquote-footer" id="our-offer">
+        <!-- <footer class="blockquote-footer" id="our-offer">
           Koki (Mentee)
-        </footer>
+        </footer> -->
       </blockquote>
     </div>
     <div></div>
@@ -215,13 +219,78 @@
 
     <!--THE MODALS-->
     <!--THESE POP UP WHEN CLICKED ON THE FIND OUT MORE BUTTONS ABOVE-->
+    <!--ABOUT MODAL-->
+    <div
+      class="modal fade"
+      id="about-modal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content modal-bg">
+          <div class="modal-header">
+            <h5 class="modal-title dark-text">
+              ABOUT US
+            </h5>
+            <button
+              type="button"
+              class="close dark-text"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p class="dark-text-p">
+              We believe every young person will benefit from meeting regularly
+              with a mentor. Experience has taught us that engagement with a
+              positive role model will improve confidence and give youngsters a
+              listening ear to which they can ask questions and share
+              experiences. Music provides us with an additional medium to
+              encourage creativity and self expression.
+            </p>
+            <p class="dark-text-p">
+              Music Mentoring began as a pilot in June 2017 under the name
+              ‘tbsongwriting’. Dan had seen the direct impact of 1-1 mentoring
+              but was interested to see if offering music as part of sessions
+              could work. In partnership with an Essex based studio space, Dan
+              was given referrals, mostly 15-18 yrs old and ‘NEET’ (not in
+              education or employment) and found that incorporating music and
+              songwriting into mentoring sessions resulted in significant
+              improvement to self-esteem and their honesty. Where as in London
+              he had found that new mentoring relationships often only engaged
+              in surface level conversation for months, music provided a safe
+              medium for youngsters to open up about well being much sooner
+              through lyric writing and creative expression.
+            </p>
+            <p class="dark-text-p">
+              To date, in 2020 we have mentored up to 20 young poeple a week
+              between our team of 4 mentors and we run weekly group sessions.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn bg-grey light-text btn-gry"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--END OF MODAL-->
     <!--ONE TO ONE MODAL-->
     <div
       class="modal fade"
       id="mentoring-modal"
       tabindex="-1"
       role="dialog"
-      aria-labelledby="exampleModalCenterTitle"
+      aria-labelledby="mentoring-modal"
       aria-hidden="true"
     >
       <div class="modal-dialog modal-dialog-centered" role="document">
